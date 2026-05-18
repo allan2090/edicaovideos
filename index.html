@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor de Vídeo MP4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <div class="app-header-top">
+        <div>
+          <h1>Editor de Vídeo MPEG-4</h1>
+          <p>Faça upload de um ou mais vídeos MPEG-4, edite cada arquivo individualmente e junte-os em um único filme.</p>
+        </div>
+        <div class="user-actions">
+          <span id="userGreeting">Olá, usuário</span>
+          <a id="adminPageLink" class="nav-link" href="admin.html" hidden>Admin</a>
+          <button id="logoutButton" class="secondary">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <label class="file-label">
+        Escolher vídeos MPEG-4
+        <input id="videoFile" type="file" accept="video/mp4,video/mpeg,video/quicktime,.mp4,.m4v,.mpeg,.mpg" multiple />
+      </label>
+
+      <div id="fileList" class="file-list">Nenhum arquivo selecionado.</div>
+      <div id="selectedFileInfo" class="selected-file-info"></div>
+
+      <div class="slider-row">
+        <div>
+          <label for="startTime">Início (segundos)</label>
+          <input id="startTime" type="number" min="0" step="0.1" value="0" disabled />
+        </div>
+        <div>
+          <label for="endTime">Fim (segundos)</label>
+          <input id="endTime" type="number" min="0" step="0.1" value="0" disabled />
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="trimButton" class="primary" disabled>Recortar vídeo</button>
+        <button id="mergeButton" class="primary" disabled>Juntar vídeos</button>
+      </div>
+
+      <div class="status" id="status">Carregue um ou mais vídeos MPEG-4 para começar.</div>
+    </section>
+
+    <section class="preview">
+      <h2>Pré-visualização</h2>
+      <video id="videoPreview" controls></video>
+      <a id="downloadLink" class="download-link" hidden>Baixar vídeo recortado</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

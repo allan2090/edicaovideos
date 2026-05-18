@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administração de Usuários</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell admin-shell">
+    <header>
+      <div class="app-header-top">
+        <div>
+          <h1>Administração de Usuários</h1>
+          <p>Gerencie o cadastro, as permissões e as contas de acesso.</p>
+        </div>
+        <div class="user-actions">
+          <a class="nav-link" href="/">Voltar ao editor</a>
+          <button id="logoutButton" class="secondary">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="admin-card">
+      <div class="admin-header">
+        <h2>Novo usuário</h2>
+        <button id="refreshUsers" class="primary">Atualizar lista</button>
+      </div>
+
+      <form id="createUserForm">
+        <label>
+          Nome
+          <input type="text" id="newName" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="newEmail" required />
+        </label>
+        <label>
+          Senha
+          <input type="password" id="newPassword" required />
+        </label>
+        <label>
+          Papel
+          <select id="newRole">
+            <option value="user">Usuário</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </label>
+        <button type="submit" class="primary">Criar usuário</button>
+      </form>
+
+      <div id="adminMessage" class="admin-message"></div>
+      <div class="user-table">
+        <h2>Usuários cadastrados</h2>
+        <div id="userList">Carregando usuários...</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

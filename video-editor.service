@@ -1,0 +1,15 @@
+[Unit]
+Description=Video Editor API (example service)
+After=network.target
+
+[Service]
+Type=simple
+User=videoeditor
+WorkingDirectory=/opt/video-editor
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /opt/video-editor/server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

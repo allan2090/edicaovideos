@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Editor de Vídeo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-card">
+      <h1>Entrar</h1>
+      <p>Use seu email e senha para acessar a ferramenta.</p>
+
+      <form id="loginForm">
+        <label>
+          Email
+          <input type="email" id="email" required autocomplete="username" />
+        </label>
+
+        <label>
+          Senha
+          <input type="password" id="password" required autocomplete="current-password" />
+        </label>
+
+        <button type="submit" class="primary">Entrar</button>
+      </form>
+
+      <div id="message" class="auth-message"></div>
+      <p class="auth-help">Primeiro acesso? Use <strong>admin@localhost</strong> e senha <strong>admin123</strong>.</p>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 2,
+    "name": "Allan Dayvis",
+    "email": "linkhostcloud@gmail.com",
+    "role": "admin",
+    "passwordHash": "5b19b0af2fc3b2a1663cd3341f79f645734c8b1d6d9dda8cf1d7cf5acccbd4d4"
+  },
+  {
+    "id": 3,
+    "name": "Administrador",
+    "email": "admin@localhost",
+    "role": "admin",
+    "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"
+  }
+]
